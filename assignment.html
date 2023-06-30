@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frond End Development</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    #left-panel {
+      height: 150px;
+      width: 200px;
+      background-color: #e79494;
+    }
+
+    #content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* CSS styles for the navigation links */
+    .nav-link {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .nav-link:hover {
+      background-color: #aee1e1;
+    }
+  </style>
+  <script>
+    // JavaScript code for handling navigation
+    function showContent(contentId) {
+      var content = document.getElementById(contentId);
+      var contentElements = document.getElementsByClassName('content');
+
+      for (var i = 0; i < contentElements.length; i++) {
+        contentElements[i].style.display = 'none';
+      }
+
+      content.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div id="left-panel">
+    <a class="nav-link" href="#" onclick="showContent('home-content')">Home</a>
+    <a class="nav-link" href="#" onclick="showContent('contact-content')">Contact</a>
+    <a class="nav-link" href="#" onclick="showContent('info-content')">Information</a>
+    <a class="nav-link" href="#" onclick="showContent('guide-content')">Guide</a>
+  </div>
+
+  <div id="content">
+    <div id="home-content" class="content">
+      <h1>This is Ambika Yamadri</h1>
+      <p>Creative and self-starting Front-End Developer with
+        experience in building stable websites in fast-paced,
+        collaborative environments using react.js. Highly skilled in
+        HTML,CSS,JavaScript and working knowledge of Firebase.
+        Well-versed in GitHub and MySQL.</p>
+    </div>
+
+    <div id="contact-content" class="content" style="display: none;">
+      <h1>Contact Information</h1>
+      <p>Mobile No: 9849576210</p>
+      <p>Email: ambikayamadri@gmail.com</p>
+      <p>Address: Hyderabad</p>
+    </div>
+
+    <div id="info-content" class="content" style="display: none;">
+      <h1>Information Page</h1>
+      <p>I am currently Pursuing my final year in Bachelor's Degree at Gokaraju Rangaraju College of Engineering and Technology,Hyderabad.I am actively looking for Internships and also Full-time roles.I have advance knowledge in developing websites using HTML,CSS and JavaScript.</p>
+    </div>
+
+    <div id="guide-content" class="content" style="display: none;">
+      <h1>Guide Page</h1>
+      <p>Here is my GitHub Link</p>
+      <p>Check out the projects on my GitHub profile.</p>
+      <a href="https://github.com/ambikayamadri" >GitHub Link</a>
+    </div>
+  </div>
+</body>
+</html>
